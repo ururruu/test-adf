@@ -8,4 +8,4 @@ ENV PYTHONUNBUFFERED=1
 WORKDIR /app
 COPY . .
 
-CMD ["/bin/bash"]
+CMD ["python", "main.py"]
