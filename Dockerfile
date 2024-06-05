@@ -5,8 +5,8 @@ FROM python:3.8-slim-buster
 ENV PYTHONDONTWRITEBYTECODE=1
 # Turns off buffering for easier container logging
 ENV PYTHONUNBUFFERED=1
-WORKDIR /app
+WORKDIR app/
 COPY . .
-RUN mkdir -p /app/files
+RUN mkdir -p /app/app/files
 
 CMD ["python", "app/main.py"]
