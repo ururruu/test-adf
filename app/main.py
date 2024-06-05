@@ -11,6 +11,7 @@ def main(files_folder: str, filename: str):
 
 if __name__ == "__main__":
     print('Test')
+    print('Test2')
     result = subprocess.run(['find', '.'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
     print(result.stdout)
     filename = os.environ['input_file']
