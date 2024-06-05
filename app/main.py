@@ -1,5 +1,5 @@
-import logging
 import os
+import subprocess
 
 
 def main(files_folder: str, filename: str):
@@ -11,7 +11,8 @@ def main(files_folder: str, filename: str):
 
 if __name__ == "__main__":
     print('Test')
-    logging.info('test2')
+    result = subprocess.run(['find', '.'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    print(result.stdout)
     filename = os.environ['input_file']
     files_folder = os.environ['files_folder']
     main(files_folder, filename)
