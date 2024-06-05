@@ -2,7 +2,7 @@ import os
 import subprocess
 
 
-def main(files_folder: str, filename: str):
+def main(filename: str):
     with open(f'app/files/{filename}', 'r') as file:
         print(file.read())
     with open(f'app/files/output_file.txt', 'w') as output_file:
