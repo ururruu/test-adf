@@ -7,6 +7,5 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 WORKDIR app/
 COPY . .
-RUN mkdir -p /app/app/files
 
 CMD ["python", "app/main.py"]
